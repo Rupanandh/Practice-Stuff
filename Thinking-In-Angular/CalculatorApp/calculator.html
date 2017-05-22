@@ -1,0 +1,29 @@
+<html ng-app="calculatorApp">
+
+<head>
+    <title>Calculator App</title>
+    <script src="angular.js"></script>
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <div ng-controller="calculatorCtrl">
+        <input ng-model="userInput1" type="text" ></input>
+        <span ng-bind="operationType"></span>
+        <input ng-model="userInput2" type="text" ></input>
+        <button ng-click="calculate()">=</button>
+        <span ng-bind="result"></span>
+        <p>Coose Operation :
+            <button ng-click="buttonClicked('+')">+</button>
+            <button ng-click="buttonClicked('*')">*</button>
+            <button ng-click="buttonClicked('-')">-</button>
+            <button ng-click="buttonClicked('/')">/</button>
+
+        </p>
+        {{userInput1}} {{userInput2}}
+    </div>
+    
+
+</body>
+
+</html>
